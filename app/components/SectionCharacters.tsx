@@ -123,7 +123,7 @@ export default function Characters() {
           {data === null && erro === null && (
             <div className="w-full h-56 flex justify-center items-center">
               <h1 className="text-xl text-zinc-800/80 dark:text-white font-semibold opacity-60">
-                SEARCH FOR CHARACTER&apos;S
+                SEARCH FOR CHARACTERS
               </h1>
             </div>
           )}
