@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   addToFavorite,
   removeFromFavorite,
@@ -28,12 +29,12 @@ interface CardProps {
   } | null;
 }
 
-export default function Card({ data }: CardProps) {
+export default function Card({ data }: any) {
   const [click, setClick] = useState<boolean>(false);
 
   const dispatch = useDispatch();
 
-  const toggle = (data: CardProps) => {
+  const toggle = (data: any) => {
     if (click === false) {
       dispatch(addToFavorite(data));
     } else {
@@ -43,23 +44,7 @@ export default function Card({ data }: CardProps) {
 
   return (
     <div className="border-[1px] border-slate-200 bg-zinc-100 w-[200px] h-[400px] rounded-md mt-4 mb-4 relative  sm:flex sm:flex-row sm:w-[400px] sm:h-[200px] items-center dark:border-zinc-600 dark:bg-zinc-700">
-      {/* <img
-        className="w-[200px] h-[200px] rounded-t-md sm:rounded-l-md sm:rounded-none"
-        src={data?.image}
-      /> */}
-      {/* <img
-        onClick={(): void => {
-          setClick(!click);
-          toggle(data);
-        }}
-        className="bg-white/80 rounded-full p-2 absolute w-10 h-10 ml-2 mb-36 cursor-pointer hover:animate-pulse"
-        src={click ? coracaoCheio : coracaoVazio}
-      /> */}
       <div className="w-[200px] h-[200px] rounded-r-md text-center">
-        {/* <img
-          className=" hidden w-[200px] h-[200px] grayscale opacity-10 absolute p-2 dark:flex"
-          src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png"
-        /> */}
         <div className="w-full h-10 flex flex-col justify-end items-center">
           <span className="text-white font-bold text-xs bg-zinc-800 px-2 py-1 rounded-md bg-opacity-50 text-center tracking-wider">
             {data?.name}
