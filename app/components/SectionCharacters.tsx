@@ -78,10 +78,6 @@ export default function Characters() {
       getCharacter();
     }
   };
-
-  useEffect(() => {
-    getCharacter();
-  }, [specie, status, gender]);
   return (
     <>
       <div className="w-screen flex-col justify-center pb-10 pt-56 lg:flex lg:flex-row">
@@ -104,12 +100,7 @@ export default function Characters() {
                 <div
                   onClick={getCharacter}
                   className="w-8 h-8 bg-zinc-200 dark:bg-zinc-800 rounded-r-md flex justify-center items-center cursor-pointer transition-all dark:hover:opacity-90 dark:hover:bg-green-600 hover:opacity-90 hover:bg-green-600"
-                >
-                  <img
-                    className="w-[20px]"
-                    src="https://cdn-icons-png.flaticon.com/128/2311/2311526.png"
-                  />
-                </div>
+                ></div>
               </div>
               {mostraPesquisa === true && pesquisa !== "" && (
                 <span className="h-0 text-zinc-800/40 dark:text-white/40 text-[12px] mt-1 font-bold tracking-wider">{`Showing results for: ${pesquisa}`}</span>
@@ -132,7 +123,7 @@ export default function Characters() {
           {data === null && erro === null && (
             <div className="w-full h-56 flex justify-center items-center">
               <h1 className="text-xl text-zinc-800/80 dark:text-white font-semibold opacity-60">
-                SEARCH FOR CHARACTER'S
+                SEARCH FOR CHARACTER&apos;S
               </h1>
             </div>
           )}
@@ -161,10 +152,6 @@ export default function Characters() {
                           key={item.name}
                           className="w-40 h-40 relative flex justify-center items-end hover:animate-pulse"
                         >
-                          <img
-                            className="rounded-md absolute dark:border-none border-[1px] border-zinc-500"
-                            src={item.image}
-                          />
                           <span className="text-xs absolute text-white bg-zinc-800 bg-opacity-80 rounded-md mb-1 p-1 text-center">
                             {item.name}
                           </span>
