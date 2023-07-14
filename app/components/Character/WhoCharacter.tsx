@@ -69,7 +69,7 @@ export default function Who() {
       {isClicked && (
         <div className="w-fit h-[80] flex md-pr-24 lg-pr-0 justify-end sm:gap-4 md:gap-20 lg:gap-0 xl:gap-6 2xl:gap-12 gap-4 relative">
           <div className="hidden sm:flex lg:hidden xl:flex w-44 h-44 flex justify-center">
-            {data !== null && <img className="rounded-md" src={data?.image} />}
+            {/* {data !== null && <img className="rounded-md" src={data?.image} />} */}
             {data === null && <h1>LOADING...</h1>}
           </div>
           <div className="w-[300px] h-full flex flex-col gap-4">
