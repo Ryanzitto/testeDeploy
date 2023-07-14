@@ -5,7 +5,7 @@ import Episodes from "./components/SectionEpisodes";
 import Footer from "./components/FooterApp";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-2 p-24 font-black text-3xl text-zinc-800">
+    <main className="bg-zinc-100 dark:bg-neutral-800 overflow-x-hidden flex-col">
       <HomeSection />
       <Characters />
       <Locations />
