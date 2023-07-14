@@ -90,7 +90,7 @@ export default function Characters() {
             </div>
             <div className="w-[100%] mt-6 flex flex-col justify-end items-center gap-2 sm:mt-0">
               <h2 className="text-[10px] text-zinc-800 dark:text-white text-opacity-70 tracking-wider font-bold dark:font-medium">
-                SEARCH FOR CHARACTER'S NAMES
+                SEARCH FOR CHARACTERS NAMES
               </h2>
               <div
                 onChange={pesquisaHandleChange}
